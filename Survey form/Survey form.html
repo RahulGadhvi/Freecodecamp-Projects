@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1 id="title">Survey Form</h1>
+            <p id="description">Hey guys, please provide your feedback on the Meetup today!</p>
+            <form id="survey-form" action="/submit" method="POST">
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    <!-- Name -->
+                    <label id="name-label" for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <br>
+                    <!-- Email -->
+                    <label id="email-label" for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <br>
+                    <!-- Number -->
+                    <label id="number-label" for="number">Phone Number</label>
+                    <input type="number" id="number" name="phone" placeholder="Enter your number" min="1000000000"
+                        max="9999999999" required>
+                    <br>
+                    <!-- Dropdown Menu -->
+                    <label for="dropdown">Gender</label>
+                    <select id="dropdown" name="gender" required>
+                        <option value="" disabled selected>Select your gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </fieldset>
+
+                <!-- Radio Buttons -->
+                <fieldset>
+                    <legend>Did you enjoy the Meetup?</legend>
+                    <label>
+                        <input type="radio" name="enjoy" value="Yes" required>
+                        Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="enjoy" value="No">
+                        No
+                    </label>
+                </fieldset>
+
+                <!-- Checkboxes -->
+                <fieldset>
+                    <legend>Select different subjects you are interested in:</legend>
+                    <label>
+                        <input type="checkbox" name="subjects" value="English">
+                        English
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="subjects" value="Hindi">
+                        Hindi
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="subjects" value="Gujarati">
+                        Gujarati
+                    </label>
+                </fieldset>
+
+                <!-- Text Area -->
+                <fieldset>
+                    <label for="Suggestions">Any suggestions to improve our Meetup's in future</label>
+                    <textarea id="Suggestions" name="suggestions" placeholder="Write your feedback here..." rows="5"
+                        required></textarea>
+                </fieldset>
+
+                <!-- Submit Button -->
+                <button id="submit" type="submit">SUBMIT</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
